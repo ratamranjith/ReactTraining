@@ -1,5 +1,5 @@
 import "./App.css";
-// import ClassComponentExample from "./components/classComponentExample";
+import ClassComponentExample from "./components/classComponentExample";
 import FunctionalComponentExample from "./components/FunctionalComponentExample";
 function App() {
   const products = {
@@ -11,7 +11,7 @@ function App() {
   };
   return (
     <>
-      {/* <ClassComponentExample productInfo={products} /> */}
+      <ClassComponentExample productInfo={products} />
       <FunctionalComponentExample productInfo={products} />
     </>
   );
