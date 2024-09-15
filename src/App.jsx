@@ -1,6 +1,8 @@
+// import ClassComponentExample from "./components/classComponentExample";
+// import FunctionalComponentExample from "./components/FunctionalComponentExample";
+import ListInComponents from "./components/ListInComponents";
+import ListProductCompanies from "./components/ListProductCompanies";
 import "./App.css";
-import ClassComponentExample from "./components/classComponentExample";
-import FunctionalComponentExample from "./components/FunctionalComponentExample";
 function App() {
   const products = {
     Apple: 50,
@@ -18,15 +20,21 @@ function App() {
     <>
       <div>
         <input type="text" placeholder="component: class | functional" />
-        <button type="submit" onClick={ChangeMe}>
+        <button
+          type="submit"
+          className="w-64 bg-teal-500 rounded-xl text-white py-4 px-4"
+          onClick={ChangeMe}
+        >
           Submit
         </button>
       </div>
       {/*Conditional Rendering */}
-      {products.Apple >= 20 && products.OnePlus < 60 ? (
+      {products ? (
         <>
-          <ClassComponentExample productInfo={products} />
-          <FunctionalComponentExample productInfo={products} />
+          {/* <ClassComponentExample productInfo={products} />
+          <FunctionalComponentExample productInfo={products} /> */}
+          <ListInComponents />
+          <ListProductCompanies />
         </>
       ) : (
         <p>Eppadi work aagum</p>

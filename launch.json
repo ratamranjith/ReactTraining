@@ -2,7 +2,7 @@
   "configurations": [
     {
       "name": "Launch Program",
-      "program": "${workspaceFolder}/app.js",
+      "program": "C:/Geeks/react-simplified/src/App.jsx",
       "request": "launch",
       "skipFiles": [
         // "<node_internals>/**"
