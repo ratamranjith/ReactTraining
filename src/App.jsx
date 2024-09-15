@@ -9,10 +9,28 @@ function App() {
     Google: 55,
     Xiaomi: 35,
   };
+
+  const ChangeMe = () => {
+    console.log("Button clicked");
+  };
+
   return (
     <>
-      <ClassComponentExample productInfo={products} />
-      <FunctionalComponentExample productInfo={products} />
+      <div>
+        <input type="text" placeholder="component: class | functional" />
+        <button type="submit" onClick={ChangeMe}>
+          Submit
+        </button>
+      </div>
+      {/*Conditional Rendering */}
+      {products.Apple >= 20 && products.OnePlus < 60 ? (
+        <>
+          <ClassComponentExample productInfo={products} />
+          <FunctionalComponentExample productInfo={products} />
+        </>
+      ) : (
+        <p>Eppadi work aagum</p>
+      )}
     </>
   );
 }
