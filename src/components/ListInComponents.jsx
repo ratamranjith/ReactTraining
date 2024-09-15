@@ -1,25 +1,43 @@
 import SoftwareList from "../utils/SoftwareList";
 
 const ListInComponents = () => {
-  const companyDetails = SoftwareList;
+  // Group products by company
+  const groupedByCompany = SoftwareList.reduce((acc, curr) => {
+    if (!acc[curr.company]) {
+      acc[curr.company] = [];
+    }
+    acc[curr.company].push(curr);
+    return acc;
+  }, {});
 
   return (
     <div className="container mx-auto p-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Software List</h1>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {companyDetails.map((keys, index) => (
-          <li
-            key={keys.name}
-            className="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow duration-300"
-          >
-            <div className="text-lg font-semibold text-gray-800">
-              {index + 1}. {keys.company}
+      <h1 className="text-3xl font-bold text-center mb-8">
+        Company and its products
+      </h1>
+      <div className="border-l-4 border-gray-300 pl-4">
+        {Object.keys(groupedByCompany).map((company, index) => (
+          <div key={index} className="mb-6">
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              {company}
+            </h2>
+            <div className="ml-4">
+              {groupedByCompany[company].map((product) => (
+                <div
+                  key={product.name}
+                  className="pl-4 border-l-4 border-gray-200 relative"
+                >
+                  <div className="absolute -left-3 top-2 w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <span className="text-gray-600">- {product.name}</span>
+                  <span className="text-gray-500 ml-2">
+                    Version: {product.version}
+                  </span>
+                </div>
+              ))}
             </div>
-            <div className="text-gray-600">Product: {keys.name}</div>
-            <div className="text-gray-500">Version: {keys.version}</div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
