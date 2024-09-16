@@ -1,47 +1,47 @@
 import { useState } from "react";
 
+const vehicle = {
+  brand: "Toyota",
+  model: "Camry",
+  year: 2015,
+  color: "Blue",
+};
+
 const MultipleStateManagement = () => {
-  const [color, setColor] = useState("Orange");
-  const [brand, setBrand] = useState("Honda");
-  const [model, setModel] = useState("Hornet");
-  const [year, setYear] = useState(2020);
+  //   const [color, setColor] = useState("Orange");
+  //   const [brand, setBrand] = useState("Honda");
+  //   const [model, setModel] = useState("Hornet");
+  //   const [year, setYear] = useState(2020);
+  const [vehicles, setVehicles] = useState(vehicle);
+
+  console.log("Current State", vehicles);
+
+  const changeColor = () => {
+    setVehicles((prevVehicles) => {
+      return { ...prevVehicles, color: "Red" };
+    });
+  };
 
   return (
-    <div>
+    <>
       <h1>Vehicle Details</h1>
-      <p>Brand: {brand}</p>{" "}
+      <p>Brand: {vehicles.brand}</p> <p>Color: {vehicles.color}</p>
+      <p>Model: {vehicles.model}</p>
+      <p>Year: {vehicles.year}</p>
       <button
         onClick={() => {
-          setBrand("Toyota");
+          setVehicles({
+            brand: "Honda",
+            model: "Hornet",
+            year: 2025,
+            color: "green",
+          });
         }}
       >
-        Change
+        Change All
       </button>
-      <p>Color: {color}</p>
-      <button
-        onClick={() => {
-          setColor("Red");
-        }}
-      >
-        Change
-      </button>
-      <p>Model: {model}</p>
-      <button
-        onClick={() => {
-          setModel("HondaZ");
-        }}
-      >
-        Change
-      </button>
-      <p>Year: {year}</p>
-      <button
-        onClick={() => {
-          setYear(2025);
-        }}
-      >
-        Change
-      </button>
-    </div>
+      <button onClick={changeColor}>Change Color</button>
+    </>
   );
 };
 
