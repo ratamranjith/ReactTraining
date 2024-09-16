@@ -1,10 +1,12 @@
-import ClassComponentExample from "./components/classComponentExample";
-import FunctionalComponentExample from "./components/FunctionalComponentExample";
-import ListInComponents from "./components/ListInComponents";
-import ListProductCompanies from "./components/ListProductCompanies";
-import InlineStyleComponent from "./components/InlineStyleComponent";
-import StyleForParticularComponent from "./components/StyleForParticularComponent";
-import "./App.css";
+// import ClassComponentExample from "./components/classComponentExample";
+// import FunctionalComponentExample from "./components/FunctionalComponentExample";
+// import ListInComponents from "./components/ListInComponents";
+// import ListProductCompanies from "./components/ListProductCompanies";
+// import InlineStyleComponent from "./components/InlineStyleComponent";
+// import StyleForParticularComponent from "./components/StyleForParticularComponent";
+import StateManagement from "./components/functional/StateManagement";
+// import "./App.css";
+import FavoriteProduct from "./components/FavoriteProduct";
 function App() {
   const products = {
     Apple: 50,
@@ -14,16 +16,18 @@ function App() {
     Xiaomi: 35,
   };
 
-  const ChangeMe = () => {
-    console.log("Button clicked");
-  };
+  // const ChangeMe = () => {
+  //   console.log("Button clicked");
+  // };
 
   return (
     <>
       {/*Conditional Rendering */}
       {products ? (
         <>
-          <div>
+          <FavoriteProduct />
+          <StateManagement />
+          {/* <div>
             <InlineStyleComponent />
           </div>
           <div>
@@ -50,7 +54,7 @@ function App() {
             >
               Submit
             </button>
-          </div>
+          </div> */}
         </>
       ) : (
         <p>Eppadi work aagum</p>
