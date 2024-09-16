@@ -8,6 +8,7 @@ import StateManagement from "./components/functional/StateManagement";
 import ClassStateManagement from "./components/class/ClassStateManagement";
 // import "./App.css";
 import FavoriteProduct from "./components/FavoriteProduct";
+import MultipleStateManagement from "./components/functional/MultipleStateManagement";
 function App() {
   const products = {
     Apple: 50,
@@ -29,6 +30,7 @@ function App() {
           <FavoriteProduct />
           <StateManagement />
           <ClassStateManagement />
+          <MultipleStateManagement />
           {/* <div>
             <InlineStyleComponent />
           </div>
