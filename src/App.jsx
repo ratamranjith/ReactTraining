@@ -5,6 +5,7 @@
 // import InlineStyleComponent from "./components/InlineStyleComponent";
 // import StyleForParticularComponent from "./components/StyleForParticularComponent";
 import StateManagement from "./components/functional/StateManagement";
+import ClassStateManagement from "./components/class/ClassStateManagement";
 // import "./App.css";
 import FavoriteProduct from "./components/FavoriteProduct";
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <>
           <FavoriteProduct />
           <StateManagement />
+          <ClassStateManagement />
           {/* <div>
             <InlineStyleComponent />
           </div>
