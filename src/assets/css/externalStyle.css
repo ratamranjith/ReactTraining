@@ -1,0 +1,7 @@
+p > span {
+  color: "blue";
+  font-size: larger;
+  padding: 3%;
+  margin: 10%;
+  background-color: goldenrod;
+}

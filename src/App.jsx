@@ -1,7 +1,9 @@
-// import ClassComponentExample from "./components/classComponentExample";
-// import FunctionalComponentExample from "./components/FunctionalComponentExample";
+import ClassComponentExample from "./components/classComponentExample";
+import FunctionalComponentExample from "./components/FunctionalComponentExample";
 import ListInComponents from "./components/ListInComponents";
 import ListProductCompanies from "./components/ListProductCompanies";
+import InlineStyleComponent from "./components/InlineStyleComponent";
+import StyleForParticularComponent from "./components/StyleForParticularComponent";
 import "./App.css";
 function App() {
   const products = {
@@ -18,23 +20,37 @@ function App() {
 
   return (
     <>
-      <div>
-        <input type="text" placeholder="component: class | functional" />
-        <button
-          type="submit"
-          className="w-64 bg-teal-500 rounded-xl text-white py-4 px-4"
-          onClick={ChangeMe}
-        >
-          Submit
-        </button>
-      </div>
       {/*Conditional Rendering */}
       {products ? (
         <>
-          {/* <ClassComponentExample productInfo={products} />
-          <FunctionalComponentExample productInfo={products} /> */}
-          <ListInComponents />
+          <div>
+            <InlineStyleComponent />
+          </div>
+          <div>
+            <StyleForParticularComponent />
+          </div>
+          <div>
+            <ClassComponentExample productInfo={products} />
+          </div>
+          <div>
+            <FunctionalComponentExample productInfo={products} />
+          </div>
+          <div>
+            <ListInComponents />
+          </div>
+
           <ListProductCompanies />
+
+          <div>
+            <input type="text" placeholder="component: class | functional" />
+            <button
+              type="submit"
+              className="w-64 bg-teal-500 rounded-xl text-white py-4 px-4"
+              onClick={ChangeMe}
+            >
+              Submit
+            </button>
+          </div>
         </>
       ) : (
         <p>Eppadi work aagum</p>

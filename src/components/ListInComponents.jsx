@@ -18,9 +18,9 @@ const ListInComponents = () => {
       <div className="border-l-4 border-gray-300 pl-4">
         {Object.keys(groupedByCompany).map((company, index) => (
           <div key={index} className="mb-6">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+            <span className="text-xl font-semibold text-gray-800 mb-2">
               {company}
-            </h2>
+            </span>
             <div className="ml-4">
               {groupedByCompany[company].map((product) => (
                 <div
