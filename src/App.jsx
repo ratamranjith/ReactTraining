@@ -1,15 +1,15 @@
-// import ClassComponentExample from "./components/classComponentExample";
-// import FunctionalComponentExample from "./components/FunctionalComponentExample";
-// import ListInComponents from "./components/ListInComponents";
-// import ListProductCompanies from "./components/ListProductCompanies";
-// import InlineStyleComponent from "./components/InlineStyleComponent";
-// import StyleForParticularComponent from "./components/StyleForParticularComponent";
+import FunctionalComponentExample from "./components/functional/FunctionalComponentExample";
+import ListInComponents from "./components/functional/ListInComponents";
+import ListProductCompanies from "./components/functional/ListProductCompanies";
+import InlineStyleComponent from "./components/functional/InlineStyleComponent";
+import StyleForParticularComponent from "./components/functional/StyleForParticularComponent";
 import StateManagement from "./components/functional/StateManagement";
-import ClassStateManagement from "./components/class/ClassStateManagement";
-// import "./App.css";
-import FavoriteProduct from "./components/FavoriteProduct";
+import FavoriteProduct from "./components/functional/FavoriteProduct";
 import MultipleStateManagement from "./components/functional/MultipleStateManagement";
+import ClassComponentExample from "./components/class/ClassComponentExample";
 import MultipleClassStateManagement from "./components/class/MultipleClassStateManagement";
+import ClassStateManagement from "./components/class/ClassStateManagement";
+import "./App.css";
 function App() {
   const products = {
     Apple: 50,
@@ -19,52 +19,61 @@ function App() {
     Xiaomi: 35,
   };
 
-  // const ChangeMe = () => {
-  //   console.log("Button clicked");
-  // };
+  const ChangeMe = () => {
+    console.log("Button clicked");
+  };
 
   return (
     <>
-      {/*Conditional Rendering */}
-      {products ? (
-        <>
-          <FavoriteProduct />
-          <StateManagement />
-          <ClassStateManagement />
-          <MultipleStateManagement />
-          <MultipleClassStateManagement />
-          {/* <div>
-            <InlineStyleComponent />
-          </div>
-          <div>
-            <StyleForParticularComponent />
-          </div>
-          <div>
-            <ClassComponentExample productInfo={products} />
-          </div>
-          <div>
-            <FunctionalComponentExample productInfo={products} />
-          </div>
-          <div>
-            <ListInComponents />
-          </div>
+      <div className="bg-blue-400 w-full float-left h-fit">gbhjn</div>
+      <div className="container float-left bg-teal-400 w-auto h-full">
+        {/*Conditional Rendering */}
+        {products ? (
+          <>
+            <FavoriteProduct />
+            <StateManagement />
+            <ClassStateManagement />
+            <MultipleStateManagement />
+            <MultipleClassStateManagement />
+            <div>
+              <InlineStyleComponent />
+            </div>
+            <div>
+              <StyleForParticularComponent />
+            </div>
 
-          <ListProductCompanies />
-
-          <div>
-            <input type="text" placeholder="component: class | functional" />
-            <button
-              type="submit"
-              className="w-64 bg-teal-500 rounded-xl text-white py-4 px-4"
-              onClick={ChangeMe}
-            >
-              Submit
-            </button>
-          </div> */}
-        </>
-      ) : (
-        <p>Eppadi work aagum</p>
-      )}
+            <div>
+              <input type="text" placeholder="component: class | functional" />
+              <button
+                type="submit"
+                className="w-64 bg-teal-500 rounded-xl text-white py-4 px-4"
+                onClick={ChangeMe}
+              >
+                Submit
+              </button>
+            </div>
+          </>
+        ) : (
+          <p>Eppadi work aagum</p>
+        )}
+      </div>
+      <div className="container float-left bg-orange-200 w-auto h-full">
+        <ListProductCompanies />
+      </div>
+      <div className="container float-left bg-blue-200 w-auto h-full">
+        <div>
+          <ListInComponents />
+        </div>
+      </div>
+      <div className="container float-left bg-yellow-200 w-auto h-full">
+        <div>
+          <ClassComponentExample productInfo={products} />
+        </div>
+        <br />
+        <div>
+          <FunctionalComponentExample productInfo={products} />
+        </div>
+      </div>
     </>
   );
 }

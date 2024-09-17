@@ -1,4 +1,4 @@
-import SoftwareList from "../utils/SoftwareList";
+import SoftwareList from "../../utils/SoftwareList";
 
 const ListInComponents = () => {
   // Group products by company

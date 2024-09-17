@@ -1,4 +1,4 @@
-import "../assets/css/externalStyle.css";
+import "../../assets/css/externalStyle.css";
 
 const InlineStyleComponent = () => {
   return (
