@@ -1,4 +1,4 @@
-import ProductCompaniesList from "../utils/ProductCompaniesList";
+import ProductCompaniesList from "../../utils/ProductCompaniesList";
 
 const ListProductCompanies = () => {
   return (
