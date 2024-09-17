@@ -1,4 +1,4 @@
-import styles from "../assets/css/Inline.module.css";
+import styles from "../../assets/css/Inline.module.css";
 
 function StyleForParticularComponent() {
   return (
