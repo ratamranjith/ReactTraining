@@ -1,33 +1,43 @@
-import FunctionalComponentExample from "./components/functional/FunctionalComponentExample";
-import ListInComponents from "./components/functional/ListInComponents";
-import ListProductCompanies from "./components/functional/ListProductCompanies";
-import InlineStyleComponent from "./components/functional/InlineStyleComponent";
-import StyleForParticularComponent from "./components/functional/StyleForParticularComponent";
-import StateManagement from "./components/functional/StateManagement";
-import FavoriteProduct from "./components/functional/FavoriteProduct";
-import MultipleStateManagement from "./components/functional/MultipleStateManagement";
-import ClassComponentExample from "./components/class/ClassComponentExample";
-import MultipleClassStateManagement from "./components/class/MultipleClassStateManagement";
-import ClassStateManagement from "./components/class/ClassStateManagement";
+// import FunctionalComponentExample from "./components/functional/FunctionalComponentExample";
+// import ListInComponents from "./components/functional/ListInComponents";
+// import ListProductCompanies from "./components/functional/ListProductCompanies";
+// import InlineStyleComponent from "./components/functional/InlineStyleComponent";
+// import StyleForParticularComponent from "./components/functional/StyleForParticularComponent";
+// import StateManagement from "./components/functional/StateManagement";
+// import FavoriteProduct from "./components/functional/FavoriteProduct";
+// import MultipleStateManagement from "./components/functional/MultipleStateManagement";
+// import ClassComponentExample from "./components/class/ClassComponentExample";
+// import MultipleClassStateManagement from "./components/class/MultipleClassStateManagement";
+// import ClassStateManagement from "./components/class/ClassStateManagement";
+// import ArrayInStateManagement from "./components/functional/ArrayInStateManagement";
+// import UseEffectHook from "./components/functional/UseEffectHook";
+import FormManagement from "./components/functional/FormManagement";
 import "./App.css";
 function App() {
-  const products = {
-    Apple: 50,
-    Samsung: 45,
-    OnePlus: 40,
-    Google: 55,
-    Xiaomi: 35,
-  };
+  // const products = {
+  //   Apple: 50,
+  //   Samsung: 45,
+  //   OnePlus: 40,
+  //   Google: 55,
+  //   Xiaomi: 35,
+  // };
 
-  const ChangeMe = () => {
-    console.log("Button clicked");
-  };
+  // const ChangeMe = () => {
+  //   console.log("Button clicked");
+  // };
 
   return (
     <>
-      <div className="bg-blue-400 w-full float-left h-fit">gbhjn</div>
+      <div className="bg-teal-200 w-full float-left h-fit">
+        <FormManagement />
+      </div>
+      {/* <div className="bg-blue-800 w-full float-left h-fit">
+        <UseEffectHook />
+      </div>
+      <div className="bg-blue-400 w-full float-left h-fit">
+        <ArrayInStateManagement />
+      </div>
       <div className="container float-left bg-teal-400 w-auto h-full">
-        {/*Conditional Rendering */}
         {products ? (
           <>
             <FavoriteProduct />
@@ -73,7 +83,7 @@ function App() {
         <div>
           <FunctionalComponentExample productInfo={products} />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
