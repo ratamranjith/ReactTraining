@@ -9,6 +9,8 @@ import MultipleStateManagement from "./components/functional/MultipleStateManage
 import ClassComponentExample from "./components/class/ClassComponentExample";
 import MultipleClassStateManagement from "./components/class/MultipleClassStateManagement";
 import ClassStateManagement from "./components/class/ClassStateManagement";
+import ArrayInStateManagement from "./components/functional/ArrayInStateManagement";
+import UseEffectHook from "./components/functional/UseEffectHook";
 import "./App.css";
 function App() {
   const products = {
@@ -25,7 +27,12 @@ function App() {
 
   return (
     <>
-      <div className="bg-blue-400 w-full float-left h-fit">gbhjn</div>
+      <div className="bg-blue-400 w-full float-left h-fit">
+        <UseEffectHook />
+      </div>
+      <div className="bg-blue-400 w-full float-left h-fit">
+        <ArrayInStateManagement />
+      </div>
       <div className="container float-left bg-teal-400 w-auto h-full">
         {/*Conditional Rendering */}
         {products ? (
