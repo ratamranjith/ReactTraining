@@ -11,8 +11,9 @@
 // import ClassStateManagement from "./components/class/ClassStateManagement";
 // import ArrayInStateManagement from "./components/functional/ArrayInStateManagement";
 // import UseEffectHook from "./components/functional/UseEffectHook";
-import FormManagement from "./components/functional/FormManagement";
+// import FormManagement from "./components/functional/FormManagement";
 import "./App.css";
+import GuessGame from "./Projects/GuessGame";
 function App() {
   // const products = {
   //   Apple: 50,
@@ -28,9 +29,10 @@ function App() {
 
   return (
     <>
-      <div className="bg-teal-200 w-full float-left h-fit">
+      <GuessGame />
+      {/* <div className="bg-teal-200 w-full float-left h-fit">
         <FormManagement />
-      </div>
+      </div> */}
       {/* <div className="bg-blue-800 w-full float-left h-fit">
         <UseEffectHook />
       </div>
