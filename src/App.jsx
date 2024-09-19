@@ -13,7 +13,13 @@
 // import UseEffectHook from "./components/functional/UseEffectHook";
 // import FormManagement from "./components/functional/FormManagement";
 import "./App.css";
-import GuessGame from "./Projects/GuessGame";
+import About from "./router/About";
+import Contact from "./router/Contact";
+import Header from "./router/Header";
+import Home from "./router/Home";
+// import GuessGame from "./Projects/GuessGame";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   // const products = {
   //   Apple: 50,
@@ -29,7 +35,15 @@ function App() {
 
   return (
     <>
-      <GuessGame />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Header />
+      </BrowserRouter>
+      {/* <GuessGame /> */}
       {/* <div className="bg-teal-200 w-full float-left h-fit">
         <FormManagement />
       </div> */}
