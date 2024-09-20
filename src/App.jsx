@@ -19,6 +19,7 @@ import Header from "./router/Header";
 import Home from "./router/Home";
 // import GuessGame from "./Projects/GuessGame";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/functional/login";
 
 function App() {
   // const products = {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Header />
       </BrowserRouter>
