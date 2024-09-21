@@ -1,0 +1,38 @@
+button {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 35px;
+  color: #fff;
+  border-radius: 0.25rem;
+  clip-path: polygon(
+    10px 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%,
+    0 10px
+  );
+  height: 45px;
+  width: 120px;
+  font-size: 0.8rem;
+  letter-spacing: 1.2px;
+  transition: all 0.4s ease-in-out;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-1 {
+  background: linear-gradient(90deg, #1a00ab, #2100f5);
+  animation: gradientShift 4s infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
