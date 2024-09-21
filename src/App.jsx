@@ -12,6 +12,7 @@
 // import ArrayInStateManagement from "./components/functional/ArrayInStateManagement";
 // import UseEffectHook from "./components/functional/UseEffectHook";
 // import FormManagement from "./components/functional/FormManagement";
+
 import "./App.css";
 import About from "./router/About";
 import Contact from "./router/Contact";
@@ -20,6 +21,7 @@ import Home from "./router/Home";
 // import GuessGame from "./Projects/GuessGame";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/functional/login";
+import Dashboard from "./Projects/CrudProject/dashboard";
 
 function App() {
   // const products = {
@@ -45,6 +47,7 @@ function App() {
         </Routes>
         <Header />
       </BrowserRouter>
+      <Dashboard />
       {/* <GuessGame /> */}
       {/* <div className="bg-teal-200 w-full float-left h-fit">
         <FormManagement />
