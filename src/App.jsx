@@ -1,40 +1,40 @@
-// import FunctionalComponentExample from "./components/functional/FunctionalComponentExample";
-// import ListInComponents from "./components/functional/ListInComponents";
-// import ListProductCompanies from "./components/functional/ListProductCompanies";
-// import InlineStyleComponent from "./components/functional/InlineStyleComponent";
-// import StyleForParticularComponent from "./components/functional/StyleForParticularComponent";
-// import StateManagement from "./components/functional/StateManagement";
-// import FavoriteProduct from "./components/functional/FavoriteProduct";
-// import MultipleStateManagement from "./components/functional/MultipleStateManagement";
-// import ClassComponentExample from "./components/class/ClassComponentExample";
-// import MultipleClassStateManagement from "./components/class/MultipleClassStateManagement";
-// import ClassStateManagement from "./components/class/ClassStateManagement";
-// import ArrayInStateManagement from "./components/functional/ArrayInStateManagement";
-// import UseEffectHook from "./components/functional/UseEffectHook";
-// import FormManagement from "./components/functional/FormManagement";
+import FunctionalComponentExample from "./components/functional/FunctionalComponentExample";
+import ListInComponents from "./components/functional/ListInComponents";
+import ListProductCompanies from "./components/functional/ListProductCompanies";
+import InlineStyleComponent from "./components/functional/InlineStyleComponent";
+import StyleForParticularComponent from "./components/functional/StyleForParticularComponent";
+import StateManagement from "./components/functional/StateManagement";
+import FavoriteProduct from "./components/functional/FavoriteProduct";
+import MultipleStateManagement from "./components/functional/MultipleStateManagement";
+import ClassComponentExample from "./components/class/ClassComponentExample";
+import MultipleClassStateManagement from "./components/class/MultipleClassStateManagement";
+import ClassStateManagement from "./components/class/ClassStateManagement";
+import ArrayInStateManagement from "./components/functional/ArrayInStateManagement";
+import UseEffectHook from "./components/functional/UseEffectHook";
+import FormManagement from "./components/functional/FormManagement";
 
 import "./App.css";
 import About from "./router/About";
 import Contact from "./router/Contact";
 import Header from "./router/Header";
 import Home from "./router/Home";
-// import GuessGame from "./Projects/GuessGame";
+import GuessGame from "./Projects/GuessGame";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/functional/login";
 import Dashboard from "./Projects/CrudProject/dashboard";
 
 function App() {
-  // const products = {
-  //   Apple: 50,
-  //   Samsung: 45,
-  //   OnePlus: 40,
-  //   Google: 55,
-  //   Xiaomi: 35,
-  // };
+  const products = {
+    Apple: 50,
+    Samsung: 45,
+    OnePlus: 40,
+    Google: 55,
+    Xiaomi: 35,
+  };
 
-  // const ChangeMe = () => {
-  //   console.log("Button clicked");
-  // };
+  const ChangeMe = () => {
+    console.log("Button clicked");
+  };
 
   return (
     <>
@@ -48,11 +48,11 @@ function App() {
         <Header />
       </BrowserRouter>
       <Dashboard />
-      {/* <GuessGame /> */}
-      {/* <div className="bg-teal-200 w-full float-left h-fit">
+      <GuessGame />
+      <div className="bg-teal-200 w-full float-left h-fit">
         <FormManagement />
-      </div> */}
-      {/* <div className="bg-blue-800 w-full float-left h-fit">
+      </div>
+      <div className="bg-blue-800 w-full float-left h-fit">
         <UseEffectHook />
       </div>
       <div className="bg-blue-400 w-full float-left h-fit">
@@ -104,7 +104,7 @@ function App() {
         <div>
           <FunctionalComponentExample productInfo={products} />
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
