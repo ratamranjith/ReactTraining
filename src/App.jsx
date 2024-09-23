@@ -22,6 +22,7 @@ import Home from "./router/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/functional/login";
 import UseMemo from "./components/functional/UseMemo";
+import UseCallback from "./components/functional/UseCallback";
 // import Dashboard from "./Projects/CrudProject/dashboard";
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <Header />
       </BrowserRouter>
       <UseMemo />
+      <UseCallback />
       {/* <Dashboard /> */}
       {/* <GuessGame /> */}
       <div className="bg-teal-200 w-full float-left h-fit">
