@@ -1,11 +1,13 @@
-import UseReducer from "./useReducer";
+import TodoList from "../../../Projects/TodoList";
+import UseReducer from "./UseReducer";
 import UseState from "./UseState";
 
 const CompleteHooks = () => {
   return (
     <div>
-      <UseState />
-      <UseReducer />
+      {/* <UseState />
+      <UseReducer /> */}
+      <TodoList />
     </div>
   );
 };
