@@ -14,15 +14,17 @@
 // import FormManagement from "./components/functional/FormManagement";
 
 import "./App.css";
-import About from "./router/About";
-import Contact from "./router/Contact";
-import Header from "./router/Header";
-import Home from "./router/Home";
-// import GuessGame from "./Projects/GuessGame";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/functional/login";
-import UseMemo from "./components/functional/UseMemo";
-import UseCallback from "./components/functional/UseCallback";
+// import About from "./router/About";
+// import Contact from "./router/Contact";
+// import Header from "./router/Header";
+// import Home from "./router/Home";
+// // import GuessGame from "./Projects/GuessGame";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Login from "./components/functional/login";
+// import UseMemo from "./components/functional/UseMemo";
+// import UseCallback from "./components/functional/UseCallback";
+import CompleteHooks from "./components/functional/hooks/CompleteHooks";
+import SpaceMissionTimeline from "./Projects/SimpleSpaceTimeLine";
 // import Dashboard from "./Projects/CrudProject/dashboard";
 
 function App() {
@@ -40,7 +42,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -48,9 +50,11 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
         <Header />
-      </BrowserRouter>
-      <UseMemo />
-      <UseCallback />
+      </BrowserRouter> */}
+      {/* <UseMemo />
+      <UseCallback /> */}
+      {/* <CompleteHooks /> */}
+      <SpaceMissionTimeline />
       {/* <Dashboard /> */}
       {/* <GuessGame /> */}
       <div className="bg-teal-200 w-full float-left h-fit">
