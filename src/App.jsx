@@ -54,7 +54,7 @@ function App() {
       {/* <UseMemo />
       <UseCallback /> */}
       <CompleteHooks />
-      <SpaceMissionTimeline />
+      {/* <SpaceMissionTimeline /> */}
       {/* <Dashboard /> */}
       {/* <GuessGame /> */}
       {/* <div className="bg-teal-200 w-full float-left h-fit"> */}
