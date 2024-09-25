@@ -1,22 +1,33 @@
 import { useReducer } from "react";
-const reducer = (state, action) => {
-  console.log(state);
-  console.log(action.type);
+
+const ACTION = {
+  ADD: "ADD",
+  REMOVE: "REMOVE",
 };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case ACTION.ADD:
+      return { ...state, count: state.count + 1 };
+    default:
+      return state;
+  }
+};
+
 const UseReducer = () => {
-  const [state, dispatch] = useReducer(reducer, { name: "asdf", age: 25 });
+  const [state, dispatch] = useReducer(reducer, { count: 2 });
+
+  const increment = () => {
+    dispatch({ type: ACTION.ADD });
+  };
 
   return (
-    <div>
-      <input
-        type="text"
-        onChange={() => {
-          dispatch();
-        }}
-      />
-
-      <p>{state}</p>
-    </div>
+    <>
+      <p>{state.count}</p>
+      <button onClick={increment} className="bg-primary">
+        +
+      </button>
+    </>
   );
 };
 

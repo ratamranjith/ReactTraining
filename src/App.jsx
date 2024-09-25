@@ -53,19 +53,19 @@ function App() {
       </BrowserRouter> */}
       {/* <UseMemo />
       <UseCallback /> */}
-      {/* <CompleteHooks /> */}
+      <CompleteHooks />
       <SpaceMissionTimeline />
       {/* <Dashboard /> */}
       {/* <GuessGame /> */}
-      <div className="bg-teal-200 w-full float-left h-fit">
-        {/* <FormManagement /> */}
-      </div>
-      <div className="bg-blue-800 w-full float-left h-fit">
-        {/* <UseEffectHook /> */}
-      </div>
-      <div className="bg-blue-400 w-full float-left h-fit">
-        {/* <ArrayInStateManagement /> */}
-      </div>
+      {/* <div className="bg-teal-200 w-full float-left h-fit"> */}
+      {/* <FormManagement /> */}
+      {/* </div> */}
+      {/* <div className="bg-blue-800 w-full float-left h-fit"> */}
+      {/* <UseEffectHook /> */}
+      {/* </div> */}
+      {/* <div className="bg-blue-400 w-full float-left h-fit"> */}
+      {/* <ArrayInStateManagement /> */}
+      {/* </div> */}
       {/* <div className="container float-left bg-teal-400 w-auto h-full">
         {products ? (
           <>
